@@ -186,9 +186,6 @@ rclcpp:
   add_host: [ "ros-humble-yaml-cpp-vendor", "${{ 'fmt' if emscripten }}"]
 rclcpp_action:
   add_host: [ "ros-humble-yaml-cpp-vendor", "${{ 'fmt' if emscripten }}"]
-rsl:
-  add_host: [ "ros-humble-tl-expected"]
-  add_run: [ "ros-humble-tl-expected"]
 imu_calib:
   add_host: [ "ros-humble-eigen3-cmake-module" ]
   add_run: [ "ros-humble-eigen3-cmake-module" ]
@@ -294,3 +291,4 @@ franka_ign_ros2_control:
 lbr_ros2_control:
   add_host: ["ros-humble-kinematics-interface"]
   add_run: ["ros-humble-kinematics-interface"]
+
