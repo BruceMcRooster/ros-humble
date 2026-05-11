@@ -5,12 +5,11 @@ conda_index:
   - robostack.yaml
   - packages-ignore.yaml
 
-# Reminder for next full rebuild, the next build number should be 17
-build_number: 15
+build_number: 18
 
 mutex_package:
   name: "ros2-distro-mutex"
-  version: "0.8.0"
+  version: "0.9.0"
   upper_bound: "x.x"
   run_constraints:
     - libboost 1.88.*
@@ -301,7 +300,7 @@ packages_select_by_deps:
       - autoware_point_types
       - autoware_signal_processing
       - autoware_vehicle_info_utils
-  
+
       - automatika_ros_sugar
       - automatika_embodied_agents
       - flex_sync
