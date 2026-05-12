@@ -134,8 +134,8 @@ diff --git a/common/autoware_trajectory/include/autoware/trajectory/utils/shift.
  #include "autoware/trajectory/forward.hpp"
  
 -#include <range/v3/view/zip.hpp>
- #include <tl_expected/expected.hpp>
- 
+ #include <tl/expected.hpp>
+
  #include <string>
 @@ -119,8 +118,9 @@ tl::expected<trajectory::Trajectory<PointType>, ShiftError> shift(
    // Apply shift.
