@@ -378,6 +378,30 @@ packages_select_by_deps:
       - rot-conv
       - slider-publisher
       - twist-stamper
+
+  # TurtleBot 4 officially supports Linux only.
+  - if: linux
+    then:
+      - turtlebot4_base
+      - turtlebot4_bringup
+      - turtlebot4_cpp_tutorials
+      - turtlebot4_description
+      - turtlebot4_desktop
+      - turtlebot4_diagnostics
+      - turtlebot4_ignition_bringup
+      - turtlebot4_ignition_gui_plugins
+      - turtlebot4_ignition_toolbox
+      - turtlebot4_msgs
+      - turtlebot4_navigation
+      - turtlebot4_node
+      - turtlebot4_python_tutorials
+      - turtlebot4_robot
+      - turtlebot4_setup
+      - turtlebot4_simulator
+      - turtlebot4_tests
+      - turtlebot4_tutorials
+      - turtlebot4_viz
+
   # These packages are currently only build on Linux,
   # as trying to build them in the past on macos or Windows resulted in errors,
   # but probably they can work on all platform with some work
