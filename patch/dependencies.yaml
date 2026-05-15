@@ -188,9 +188,21 @@ rclcpp:
   add_host: [ "ros-humble-yaml-cpp-vendor", "${{ 'fmt' if emscripten }}"]
 rclcpp_action:
   add_host: [ "ros-humble-yaml-cpp-vendor", "${{ 'fmt' if emscripten }}"]
-rsl:
-  add_host: [ "ros-humble-tl-expected"]
-  add_run: [ "ros-humble-tl-expected"]
+parameter_traits:
+  remove_host: ["ros-humble-tl-expected"]
+  remove_run: ["ros-humble-tl-expected"]
+  add_host: ["cpp-expected"]
+  add_run: ["cpp-expected"]
+generate_parameter_library:
+  remove_host: ["ros-humble-tl-expected"]
+  remove_run: ["ros-humble-tl-expected"]
+  add_host: ["cpp-expected"]
+  add_run: ["cpp-expected"]
+autoware_trajectory:
+  remove_host: ["ros-humble-tl-expected"]
+  remove_run: ["ros-humble-tl-expected"]
+  add_host: ["cpp-expected"]
+  add_run: ["cpp-expected"]
 imu_calib:
   add_host: [ "ros-humble-eigen3-cmake-module" ]
   add_run: [ "ros-humble-eigen3-cmake-module" ]

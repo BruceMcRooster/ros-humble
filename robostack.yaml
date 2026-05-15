@@ -303,6 +303,8 @@ libdw-dev:
     linux: [elfutils]
     osx: []
     win64: []
+libexpected-dev:
+  robostack: [cpp-expected]
 libfcl:
   robostack: [fcl]
 libfcl-dev:
