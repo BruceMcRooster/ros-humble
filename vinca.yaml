@@ -139,7 +139,6 @@ packages_select_by_deps:
   # These are emscripten-wasm32 specific packages
   - if: wasm32
     then:
-      - dynmsg
       - rmw_wasm_cpp
       - test_wasm
       - wasm_cpp
@@ -353,6 +352,11 @@ packages_select_by_deps:
 
       - pointcloud_to_laserscan
 
+    # These packages specifically don't work on windows
+  - if: not win
+    then:
+      - dynmsg
+  
   # These packages are only built on Linux as they depend on Linux-specific API
   - if: linux
     then:

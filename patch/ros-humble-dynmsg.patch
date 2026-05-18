@@ -181,6 +181,15 @@ index 072819c..ed4716f 100644
      case rosidl_typesupport_introspection_cpp::ROS_TYPE_MESSAGE:
        // For nested types, don't copy the data out of the buffer directly. Recursively read the
        // nested type into the YAML.
+@@ -398,7 +398,7 @@ dynamic_array_to_yaml_impl_bool(
+   static_cast<void>(member_info);
+   for (size_t ii = 0; ii < v->size(); ++ii) {
+     DYNMSG_DEBUG(std::cout << (v->operator[](ii) ? "true" : "false") << ", ");
+-    array_node.push_back(v->operator[](ii));
++    array_node.push_back(static_cast<bool>(v->operator[](ii)));
+   }
+   DYNMSG_DEBUG(std::cout << std::endl);
+ }
 @@ -509,12 +509,12 @@ dynamic_array_to_yaml(
          reinterpret_cast<const std::vector<std::string> *>(member_data),
          array_node);
