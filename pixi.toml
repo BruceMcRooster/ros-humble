@@ -40,7 +40,7 @@ generate-recipes-emscripten = { cmd = "vinca -m --platform emscripten-wasm32", d
 check-patches-emscripten = { cmd = "python check_patches_clean_apply.py", depends-on = ["generate-recipes-emscripten"] }
 
 [tasks.build]
-cmd = "rattler-build build --recipe-dir ./recipes -m ./conda_build_config.yaml -c https://prefix.dev/conda-forge -c robostack-humble --skip-existing"
+cmd = "rattler-build build --recipe-dir ./recipes -m ./conda_build_config.yaml -c https://prefix.dev/conda-forge -c robostack-staging --skip-existing"
 depends-on = ["generate-recipes"]
 description = "Build all packages, from the ./recipes dir. This will skip already existing packages, so it can be used to build only a subset of packages by first removing the recipes of the packages you want to rebuild (see `pixi run remove-recipes`)."
 
