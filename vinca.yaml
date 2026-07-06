@@ -355,8 +355,6 @@ packages_select_by_deps:
       - webots_ros2         # Cyberbotics
       # Linking problems on macOS, probably a missing link to draco library or similar
       - point_cloud_transport_plugins
-      - realsense2-camera   # IntelRealSense
-      - realsense2-description # IntelRealSense
        # removed in jazzy, never supported windows or macos, no packages depend on it
       - apex_containers
       # CMake errors related to OpenCV on macos, probably fixable
@@ -435,3 +433,6 @@ packages_select_by_deps:
       - ign_ros2_control
       - gz_ros2_control
       - ur_simulation_gz
+
+      - realsense2-camera   # IntelRealSense
+      - realsense2-description # IntelRealSense
